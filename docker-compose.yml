@@ -1,21 +1,21 @@
 version: '3'
 services:
-  nodejs-server:
+  minthack-backend:
     build:
-      context: ./api
+      context: ./backend
     ports:
       - "3080:3080"
-    container_name: node-api
+    container_name: minthack-backend
     volumes:
-       - ./api:/usr/src/app/api
-       - /usr/src/app/api/node_modules
-  react-ui:
+       - ./backend:/usr/src/app/backend
+       - /usr/src/app/backend/node_modules
+  minthack-frontend:
     build:
-      context: ./my-app
+      context: ./frontend
     ports:
       - "3000:3000"
-    container_name: react-ui
+    container_name: minthack-frontend
     stdin_open: true
     volumes:
-       - ./my-app:/usr/src/app/my-app
-       - /usr/src/app/my-app/node_modules
+       - ./frontend:/usr/src/app/frontend
+       - /usr/src/app/frontend/node_modules
