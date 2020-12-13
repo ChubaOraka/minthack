@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/theme/material.css'
+import 'codemirror/theme/abcdef.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
@@ -31,7 +31,7 @@ export const Editor = (props) => {
                     lineWrapping: true,
                     lint: true,
                     mode: language,
-                    theme: 'material',
+                    theme: 'abcdef',
                     lineNumbers: true
                 }}
             />
