@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import 'codemirror/lib/codemirror.css'
+import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
@@ -21,8 +21,8 @@ export const Editor = (props) => {
     }
 
     return (
-        <div className="display-board">
-            <h4>Javascript</h4>
+        <div className="editor-container">
+            <h4 className="editor-title">Javascript</h4>
             <CodeMirror
                 onBeforeChange={handleChange}
                 value={value}

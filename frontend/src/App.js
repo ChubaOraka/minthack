@@ -16,28 +16,30 @@ class App extends Component {
   }
 
   onChangeForm = (e) => {
-      let user = this.state.user
-      if (e.target.name === 'firstname') {
-          user.firstName = e.target.value;
-      } else if (e.target.name === 'lastname') {
-          user.lastName = e.target.value;
-      } else if (e.target.name === 'email') {
-          user.email = e.target.value;
-      }
-      this.setState({user})
+    let user = this.state.user
+    if (e.target.name === 'firstname') {
+      user.firstName = e.target.value;
+    } else if (e.target.name === 'lastname') {
+      user.lastName = e.target.value;
+    } else if (e.target.name === 'email') {
+      user.email = e.target.value;
+    }
+    this.setState({ user })
   }
 
   render() {
-    
+
     return (
       <div className="App">
         <Header></Header>
-        <Editor
-          language="javascript"
-          displayName="JS"
-          value={this.state.js}
-          onChange={this.state.js}
-        />
+        <div className="main">
+          <Editor
+            language="javascript"
+            displayName="JS"
+            value={this.state.js}
+            onChange={this.state.js}
+          />
+        </div>
       </div>
     );
   }
