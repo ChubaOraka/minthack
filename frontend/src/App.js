@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Header } from './components/Header'
-import { Users } from './components/Users'
-import { DisplayBoard } from './components/DisplayBoard'
+// import { Users } from './components/Users'
+import { Editor } from './components/Editor'
 import CreateUser from './components/CreateUser'
 // import { getAllUsers, createUser } from './services/UserService'
 
@@ -32,6 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
+        <Editor></Editor>
       </div>
     );
   }
