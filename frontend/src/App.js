@@ -11,6 +11,7 @@ class App extends Component {
 
   state = {
     js: "",
+    code: "",
     users: [],
     numberOfUsers: 0
   }
@@ -35,9 +36,9 @@ class App extends Component {
         <div className="main">
           <Editor
             language="javascript"
-            displayName="JS"
-            value={this.state.js}
-            onChange={this.state.js}
+            //displayName="JS"
+            value={this.state.code}
+            onChange={(input)=> this.setState({code: input}) }
           />
         </div>
       </div>
