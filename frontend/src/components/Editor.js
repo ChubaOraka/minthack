@@ -4,6 +4,7 @@ import 'codemirror/theme/abcdef.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
+import 'codemirror/addon/edit/closebrackets.js'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 
 export const Editor = (props) => {
@@ -30,6 +31,7 @@ export const Editor = (props) => {
                 options={{
                     lineWrapping: true,
                     lint: true,
+                    autoCloseBrackets: true,
                     mode: language,
                     theme: 'abcdef',
                     lineNumbers: true
