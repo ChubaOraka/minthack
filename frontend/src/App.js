@@ -10,7 +10,7 @@ import CreateUser from './components/CreateUser'
 class App extends Component {
 
   state = {
-    user: {},
+    js: "",
     users: [],
     numberOfUsers: 0
   }
@@ -32,7 +32,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header></Header>
-        <Editor></Editor>
+        <Editor
+          language="javascript"
+          displayName="JS"
+          value={this.state.js}
+          onChange={this.state.js}
+        />
       </div>
     );
   }
