@@ -67,6 +67,20 @@
 .CodeMirror-fullscreen {
   opacity: 0.9;
 }
+
+.btn {
+  display: flex;
+}
+
+.btn .btn-info  {
+  position: absolute;
+  margin-left: 1rem;
+}
+
+.btn .btn-warning  {
+  position: relative;
+  margin: auto;
+}
     
 .mrgnbtm {
   margin-top: 20px;
