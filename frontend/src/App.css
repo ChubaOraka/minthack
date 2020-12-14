@@ -10,7 +10,24 @@
 .main {
   display: flex;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  background-color: rgb(108, 117, 125);
+}
+
+.main .main__panel--left {
+  flex: 0.7;
+  height: inherit;
+}
+.main .main__panel--right {
+  flex: 0.3;
+  height: inherit;
+}
+
+.prompt-container {
+  margin: 5.5rem;
+  margin-right: 3rem;
+  color: #f7f7f7;
+  text-align: justify;
 }
 
 .editor-container {
@@ -18,9 +35,12 @@
   flex-grow: 1;
   flex-basis: 0;
   flex-direction: column;
-  padding: .5rem;
-  background-color: rgb(108, 117, 125);
-  padding: 5%;
+  background-color: #8d9ca9;
+  height: 550px;
+  padding: 0.2rem;
+  margin: 5.5rem;
+  border-radius: .5rem;
+  box-shadow: inset 0px -2px 20px 11px rgba(0,0,0,.2)
 }
 
 .editor-title {
@@ -47,7 +67,7 @@
 .CodeMirror-fullscreen {
   opacity: 0.9;
 }
-
+    
 .mrgnbtm {
   margin-top: 20px;
 }
