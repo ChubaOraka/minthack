@@ -5,6 +5,8 @@ import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 import 'codemirror/addon/edit/closebrackets.js'
+import 'codemirror/addon/display/fullscreen.js'
+import 'codemirror/addon/display/fullscreen.css'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 
 export const Editor = (props) => {
@@ -34,7 +36,18 @@ export const Editor = (props) => {
                     autoCloseBrackets: true,
                     mode: language,
                     theme: 'abcdef',
-                    lineNumbers: true
+                    lineNumbers: true,
+                    extraKeys: {
+                        "F11": function (cm) {
+                            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                        },
+                        "Alt-Enter": function (cm) {
+                            cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                        },
+                        "Esc": function (cm) {
+                            if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                        }
+                    }
                 }}
             />
             <div className="btn">
