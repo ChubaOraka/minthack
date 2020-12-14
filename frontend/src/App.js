@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Header } from './components/Header'
-// import { Users } from './components/Users'
 import { Editor } from './components/Editor'
+import Prompt from './components/Prompt';
 import useLocalStorage from './hooks/useLocalStorage'
-import CreateUser from './components/CreateUser'
-// import { getAllUsers, createUser } from './services/UserService'
 
 function App() {
 
@@ -17,12 +15,15 @@ function App() {
     <div className="App">
       <Header></Header>
       <div className="main">
-        <Editor
-          language="javascript"
-          //displayName="JS"
-          value={code}
-          onChange={setCode}
-        />
+        <div className="main__panel--left">
+          <Prompt />
+          <Editor
+            language="javascript"
+            value={code}
+            onChange={setCode}
+          />
+        </div>
+        <div className="main__panel--right"></div>
       </div>
     </div>
   );
