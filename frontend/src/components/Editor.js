@@ -4,6 +4,7 @@ import 'codemirror/theme/abcdef.css'
 import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
+import 'codemirror/addon/selection/active-line.js'
 import 'codemirror/addon/edit/closebrackets.js'
 import 'codemirror/addon/display/fullscreen.js'
 import 'codemirror/addon/display/fullscreen.css'
@@ -13,7 +14,6 @@ export const Editor = (props) => {
 
     const {
         language,
-        // displayName,
         value,
         onChange
     } = props
@@ -37,6 +37,7 @@ export const Editor = (props) => {
                     mode: language,
                     theme: 'abcdef',
                     lineNumbers: true,
+                    styleActiveLine: true,
                     extraKeys: {
                         "F11": function (cm) {
                             cm.setOption("fullScreen", !cm.getOption("fullScreen"));
