@@ -4,6 +4,7 @@ import './App.css';
 import { Header } from './components/Header'
 // import { Users } from './components/Users'
 import { Editor } from './components/Editor'
+import useLocalStorage from './hooks/useLocalStorage'
 import CreateUser from './components/CreateUser'
 // import { getAllUsers, createUser } from './services/UserService'
 
@@ -11,7 +12,7 @@ class App extends Component {
 
   state = {
     js: "",
-    code: "",
+    code: useLocalStorage('code', ''),
     users: [],
     numberOfUsers: 0
   }
