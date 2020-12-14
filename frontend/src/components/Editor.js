@@ -52,8 +52,8 @@ export const Editor = (props) => {
                 }}
             />
             <div className="btn">
-                <button type="button" onClick={(e) => null} className="btn btn-info">Run</button>
-                <button type="button" onClick={(e) => null} className="btn btn-warning">Submit</button>
+                <button type="button" title="Run" onClick={(e) => null} className="btn btn-info">Run</button>
+                <button type="button" title="Submit" onClick={(e) => null} className="btn btn-warning">Submit</button>
             </div>
         </div>
     )
