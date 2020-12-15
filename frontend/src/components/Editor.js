@@ -9,6 +9,8 @@ import 'codemirror/addon/edit/closebrackets.js'
 import 'codemirror/addon/display/fullscreen.js'
 import 'codemirror/addon/display/fullscreen.css'
 import { Controlled as CodeMirror } from 'react-codemirror2'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleNotch, faPlay } from '@fortawesome/free-solid-svg-icons'
 
 export const Editor = (props) => {
 
@@ -52,7 +54,7 @@ export const Editor = (props) => {
                 }}
             />
             <div className="btn">
-                <button type="button" title="Run" onClick={(e) => null} className="btn btn-info">Run</button>
+                <button type="button" title="Run" onClick={(e) => null} className="btn btn-info">  <FontAwesomeIcon id="icon" icon={faPlay} /> <div id="status">Run</div></button>
                 <button type="button" title="Submit" onClick={(e) => null} className="btn btn-warning">Submit</button>
             </div>
         </div>

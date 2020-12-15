@@ -70,11 +70,22 @@
 
 .btn {
   display: flex;
+  border-radius: .5em;
 }
 
 .btn .btn-info  {
   position: absolute;
   margin-left: 1rem;
+  width: 70px;
+}
+
+.btn .btn-info #icon {
+  margin: auto;
+}
+
+.btn .btn-info #status {
+  margin: auto;
+  padding: 0.1rem;
 }
 
 .btn .btn-warning  {
