@@ -76,7 +76,8 @@
 .btn .btn-info  {
   position: absolute;
   margin-left: 1rem;
-  width: 70px;
+  width: 75px;
+  height: 40px;
 }
 
 .btn .btn-info #icon {
@@ -91,6 +92,8 @@
 .btn .btn-warning  {
   position: relative;
   margin: auto;
+  width: 75px;
+  height: 40px;
 }
     
 .mrgnbtm {

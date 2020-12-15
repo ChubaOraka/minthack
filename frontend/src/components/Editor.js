@@ -19,7 +19,7 @@ export const Editor = (props) => {
         value,
         onChange
     } = props
-    const [open, setOpen] = useState(true)
+    const [isCodeRunning, setIsCodeRunning] = useState(false)
 
     function handleChange(editor, data, value) {
         onChange(value)
@@ -54,7 +54,15 @@ export const Editor = (props) => {
                 }}
             />
             <div className="btn">
-                <button type="button" title="Run" onClick={(e) => null} className="btn btn-info">  <FontAwesomeIcon id="icon" icon={faPlay} /> <div id="status">Run</div></button>
+                <button type="button"
+                    title="Run"
+                    disabled={isCodeRunning}
+                    onClick={(e) => null}
+                    className="btn btn-info">
+                    <FontAwesomeIcon id="icon" 
+                    icon={isCodeRunning ? faCircleNotch : faPlay} />
+                    {isCodeRunning ? '' : (<div id="status">Run</div>)}
+                </button>
                 <button type="button" title="Submit" onClick={(e) => null} className="btn btn-warning">Submit</button>
             </div>
         </div>
