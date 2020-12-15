@@ -59,7 +59,9 @@ export const Editor = (props) => {
                     disabled={isCodeRunning}
                     onClick={(e) => null}
                     className="btn btn-info">
-                    <FontAwesomeIcon id="icon" 
+                    <FontAwesomeIcon 
+                    id="icon" 
+                    className={`${isCodeRunning ? 'rotate' : ''}`}
                     icon={isCodeRunning ? faCircleNotch : faPlay} />
                     {isCodeRunning ? '' : (<div id="status">Run</div>)}
                 </button>
