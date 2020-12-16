@@ -22,6 +22,7 @@ function App() {
             language="javascript"
             value={code}
             onChange={setCode}
+            runCode={setOutput}
           />
         </div>
         <div className="btn">{JSON.stringify(output)}</div>

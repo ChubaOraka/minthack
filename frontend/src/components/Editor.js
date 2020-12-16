@@ -19,6 +19,7 @@ export const Editor = (props) => {
         language,
         value,
         onChange,
+        runCode
     } = props
     const [isCodeRunning, setIsCodeRunning] = useState(false)
 
@@ -34,6 +35,7 @@ export const Editor = (props) => {
         let data = await response.data
         setIsCodeRunning(false)
         console.log(data)
+        runCode(data)
     }
 
     return (
