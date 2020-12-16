@@ -1,12 +1,15 @@
 const { response } = require('express');
 const express = require('express');
 const path = require('path');
+const { output } = require('./webpack.config');
 const app = express(),
       bodyParser = require("body-parser");
       port = 3080;
 
 // place holder for the data
 const users = [];
+
+var Sandbox = require("sandbox")
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../frontend/build')));
@@ -34,8 +37,19 @@ app.post('/backend/javascript/test', (req, res) => {
   
 
   console.log(req.body.command)
+  let command = req.body.command
 
-  res.json(req.body.command)
+  var sandbox = new Sandbox();
+  sandbox.run(command, function (output) {
+    res.json(output)
+  });
+  // sandbox.on('message', function (message) {
+    // Handle message sent from the inside
+    // In this example message will be 'hello from inside'
+  // });
+  // sandbox.postMessage('hello from outside');
+
+  
   
 });
 
