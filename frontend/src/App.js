@@ -9,6 +9,7 @@ import useLocalStorage from './hooks/useLocalStorage'
 function App() {
 
   const [code, setCode] = useLocalStorage('code', '')
+  const [output, setOutput] = useLocalStorage('output', '')
 
 
   return (
@@ -23,6 +24,7 @@ function App() {
             onChange={setCode}
           />
         </div>
+        <div className="btn">{JSON.stringify(output)}</div>
         <div className="main__panel--right"></div>
       </div>
     </div>
