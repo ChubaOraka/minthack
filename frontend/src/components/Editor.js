@@ -11,13 +11,14 @@ import 'codemirror/addon/display/fullscreen.css'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleNotch, faPlay } from '@fortawesome/free-solid-svg-icons'
+import compute from '../hooks/compute'
 
 export const Editor = (props) => {
 
     const {
         language,
         value,
-        onChange
+        onChange,
     } = props
     const [isCodeRunning, setIsCodeRunning] = useState(false)
 
@@ -29,8 +30,8 @@ export const Editor = (props) => {
         setIsCodeRunning(true)
         console.log(value)
         
-        const response = await fetch('http://localhost:3000/backend/javascript/test')
-        let data = await response.json()
+        const response = await compute.commandOutput({command: value})
+        let data = await response.data
         setIsCodeRunning(false)
         console.log(data)
     }
