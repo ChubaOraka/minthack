@@ -20,7 +20,8 @@
   "homepage": "https://github.com/bbachi/react-nodejs-example#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "http-proxy-middleware": "^1.0.4"
+    "http-proxy-middleware": "^1.0.4",
+    "sandbox": "^0.8.6"
   },
   "devDependencies": {
     "del": "^5.1.0",
