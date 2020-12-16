@@ -4,6 +4,7 @@ import './App.css';
 import { Header } from './components/Header'
 import { Editor } from './components/Editor'
 import Prompt from './components/Prompt';
+import CursorImitator from './components/CursorImitator';
 import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
             runCode={setOutput}
           />
         </div>
-        <div className="btn">{JSON.stringify(output)}</div>
+        <CursorImitator 
+        content={output.console}/>
         <div className="main__panel--right"></div>
       </div>
     </div>
