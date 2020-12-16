@@ -36,7 +36,7 @@
   flex-basis: 0;
   flex-direction: column;
   background-color: #8d9ca9;
-  height: 550px;
+  height: 350px;
   padding: 0.2rem;
   margin: 5.5rem;
   border-radius: .5rem;
@@ -47,10 +47,14 @@
   flex-grow: 1;
   flex-basis: 0;
   flex-direction: column;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14pt;
+  color: white;
   background-color: #8d9ca9;
   height: 200px;
   padding: 1rem;
   margin: 5.5rem;
+  margin-top: -50px;
   border-radius: .5rem;
   box-shadow: inset 0px -2px 20px 11px rgba(0,0,0,.2)
 }
