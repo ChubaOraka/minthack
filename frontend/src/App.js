@@ -25,9 +25,11 @@ function App() {
             onChange={setCode}
             runCode={setOutput}
           />
+          <CursorImitator
+            content={output.console}
+            className="output"
+          />
         </div>
-        <CursorImitator 
-        content={output.console}/>
         <div className="main__panel--right"></div>
       </div>
     </div>

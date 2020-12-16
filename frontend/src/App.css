@@ -43,6 +43,18 @@
   box-shadow: inset 0px -2px 20px 11px rgba(0,0,0,.2)
 }
 
+.output {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  background-color: #8d9ca9;
+  height: 200px;
+  padding: 1rem;
+  margin: 5.5rem;
+  border-radius: .5rem;
+  box-shadow: inset 0px -2px 20px 11px rgba(0,0,0,.2)
+}
+
 .editor-title {
   justify-content: space-between;
   background-color: hsl(225, 6%, 13%);
