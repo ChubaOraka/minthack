@@ -25,6 +25,16 @@ export const Editor = (props) => {
         onChange(value)
     }
 
+    async function handleRun() {
+        setIsCodeRunning(true)
+        console.log(value)
+        
+        const response = await fetch('http://localhost:3000/backend/javascript/test')
+        let data = await response.json()
+        setIsCodeRunning(false)
+        console.log(data)
+    }
+
     return (
         <div className="editor-container">
             <h4 className="editor-title">Javascript</h4>
@@ -49,7 +59,8 @@ export const Editor = (props) => {
                         },
                         "Esc": function (cm) {
                             if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
-                        }
+                        },
+                        "Ctrl-Enter": cm => handleRun(),
                     }
                 }}
             />
@@ -57,7 +68,7 @@ export const Editor = (props) => {
                 <button type="button"
                     title="Run"
                     disabled={isCodeRunning}
-                    onClick={(e) => null}
+                    onClick={handleRun}
                     className="btn btn-info">
                     <FontAwesomeIcon 
                     id="icon" 
