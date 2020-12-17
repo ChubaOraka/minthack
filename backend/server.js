@@ -4,7 +4,7 @@ const path = require('path');
 const { output } = require('./webpack.config');
 const app = express(),
       bodyParser = require("body-parser");
-      port = 3080;
+      port = process.env.PORT || 3080;
 
 // place holder for the data
 const users = [];
