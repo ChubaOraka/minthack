@@ -9,7 +9,8 @@ import useLocalStorage from './hooks/useLocalStorage'
 
 function App() {
 
-  const [code, setCode] = useLocalStorage('code', '')
+  const starterCode = 'console.log("")' // This could be retrieved from database. Probably have to use JSON.stringify(???)
+  const [code, setCode] = useLocalStorage('code', starterCode)
   const [output, setOutput] = useState({result: "null", console:['']})
 
 
