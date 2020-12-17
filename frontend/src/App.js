@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Header } from './components/Header'
@@ -10,7 +10,7 @@ import useLocalStorage from './hooks/useLocalStorage'
 function App() {
 
   const [code, setCode] = useLocalStorage('code', '')
-  const [output, setOutput] = useLocalStorage('output', '')
+  const [output, setOutput] = useState({result: "null", console:['']})
 
 
   return (
