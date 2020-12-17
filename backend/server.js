@@ -1,7 +1,6 @@
 const { response } = require('express');
 const express = require('express');
 const path = require('path');
-const { output } = require('./webpack.config');
 const app = express(),
       bodyParser = require("body-parser");
       port = process.env.PORT || 3080;
