@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/backend',
+    baseURL: '/backend',
 })
 
 export const commandOutput = payload => api.post(`/javascript/test`, payload)
