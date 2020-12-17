@@ -5,8 +5,8 @@ class CursorImitator extends React.Component {
   static defaultProps = {
     content: '',
     nextLetterTime: 50,
-    waitAtEnd: 500,
-    waitAtStart: 200,
+    waitAtEnd: 50,
+    waitAtStart: 10,
     blinkSpeed: 130,
     letterWrapClass: ''
   }

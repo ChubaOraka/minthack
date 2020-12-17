@@ -28,6 +28,9 @@ export const Editor = (props) => {
     }
 
     async function handleRun() {
+        runCode({result: "null", console:['']})
+        let waittime = 50000
+        setInterval(()=>console.log(`Waiting ${waittime} seconds`))
         setIsCodeRunning(true)
         console.log(value)
         
